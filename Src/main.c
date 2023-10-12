@@ -323,7 +323,7 @@ static void print_index(SERVO_Cfg* SERVO) {
 
 static void print_options(void) {
 	uint8_t rx_data[DATA_SIZE] = "";
-	snprintf(rx_data, DATA_SIZE,"P:Pause, C:Continue, R:Right, L:Left, N:NoOp; B:Begin \r\n >");
+	snprintf(rx_data, DATA_SIZE,"P:Pause, C:Continue, R:Right, L:Left, N:NoOp, B:Begin, I:Index, O:Options \r\n >");
 	HAL_UART_Transmit(&huart2, rx_data, DATA_SIZE, HAL_MAX_DELAY);
 }
 
