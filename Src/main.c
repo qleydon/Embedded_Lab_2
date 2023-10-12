@@ -245,9 +245,9 @@ static void start_move(SERVO_Cfg* SERVO,  unsigned char position )
 	case(0): // no change in position
 			SERVO->SERVO_COUNT_MOVE = 0; // may have been in motion when this occurred
 			SERVO->SERVO_STATE = state_at_position;
-      if(SERVO->SERVO_STATUS != status_paused) {
-        SERVO->INDEX++; // look at next move
-      }
+            if(SERVO->SERVO_STATUS != status_paused) {
+                SERVO->INDEX++; // look at next move
+            }
 			return;
 			break;
 	case(1):
@@ -385,9 +385,9 @@ void process_timestep(SERVO_Cfg* SERVO, unsigned char recipe[]){
 			}
 			if(SERVO->SERVO_COUNT_MOVE == 0){
 				SERVO->SERVO_STATE = state_at_position; // Finally at position.
-        if(SERVO->SERVO_STATUS != status_paused) {
-          SERVO->INDEX++;
-        }
+                if(SERVO->SERVO_STATUS != status_paused) {
+                     SERVO->INDEX++;
+                }
 				process_recipe(SERVO, recipe);
 			}
 			break;
@@ -567,7 +567,7 @@ int main(void)
 	  loop_flag = 0;
 	  process_timestep(servo1_p, recipe_test_graduate_opcodes);
 	  process_timestep(servo2_p, recipe_test_default);
-    read_user_command(servo1_p, servo2_p); // read user input
+      read_user_command(servo1_p, servo2_p); // read user input
 	  while(loop_flag == 0);
 
     /* USER CODE END WHILE */
