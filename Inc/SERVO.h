@@ -8,7 +8,6 @@
 #ifndef INC_SERVO_H_
 #define INC_SERVO_H_
 
-// do I need to include Servo_enums.h
 #include "Servo_enums.h"
 #include "main.h"
 
@@ -33,16 +32,9 @@ typedef struct
 	uint8_t				 RECIPE_INDEX;
     enum status	   		 SERVO_STATUS;
     enum states		     SERVO_STATE;
-    enum events	   		 SERVO_EVENTS;
 
 
 }SERVO_Cfg;
-
-typedef struct
-{
-    uint8_t		   		 SERVO_POSITION;
-    uint8_t		   		 SERVO_POSITION_GOAL;
-}SERVO_C;
 
 
 extern SERVO_Cfg SERVO_Cfg_1;

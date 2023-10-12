@@ -27,9 +27,8 @@ SERVO_Cfg SERVO_Cfg_1= // Servo Motor 1 Configurations
 	0,
 	0,
 	0,
-	status_running,
-	state_unknown,
-	user_entered_pause
+	status_paused,
+	state_waiting
 };
 
 SERVO_Cfg SERVO_Cfg_2= // Servo Motor 2 Configurations
@@ -51,7 +50,6 @@ SERVO_Cfg SERVO_Cfg_2= // Servo Motor 2 Configurations
 	0,
 	0,
 	0,
-	status_running,
-	state_unknown,
-	user_entered_pause
+	status_paused,
+	state_waiting
 };
