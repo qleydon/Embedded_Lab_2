@@ -375,7 +375,7 @@ void process_timestep(SERVO_Cfg* SERVO, unsigned char recipe[]){
 	switch(SERVO->SERVO_STATE){
 		case(state_moving):
 			SERVO->SERVO_COUNT_MOVE--; // decrement the moving counter
-			if(SERVO->SERVO_POSITION_GOAL > SERVO->SERVO_POSITION){ // this is important. this depends on the servo moving one position every 100ms. THIS NEEDS TO BE VALIDATED
+			if(SERVO->SERVO_POSITION_GOAL > SERVO->SERVO_POSITION){ 
 				SERVO->SERVO_POSITION++;
 			}
 			else if(SERVO->SERVO_POSITION_GOAL < SERVO->SERVO_POSITION){
