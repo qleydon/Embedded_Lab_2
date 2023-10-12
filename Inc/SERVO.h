@@ -26,9 +26,6 @@ typedef struct
     uint8_t		  		 SERVO_COUNT_MOVE;
 	uint8_t		  		 SERVO_COUNT_LOOP;
 	uint8_t		  		 SERVO_COUNT_WAIT;
-	uint8_t				 SERVO_COUNT_PRINT_INDEX;
-	uint8_t				 SERVO_COUNT_PRINT_RECIPE;
-	uint8_t				 SERVO_COUNT_PRINT_OPTIONS;
 	uint8_t		  		 LOOP_START;
 	uint8_t		  		 LOOP_FLAG;
 	uint8_t		  		 INDEX;
