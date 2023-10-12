@@ -208,7 +208,7 @@ void read_user_command(SERVO_Cfg* SERVO_1, SERVO_Cfg* SERVO_2){
 	else if(Rx_idx > 3 || Rx_command[2] != '\r'){
 		Rx_idx = 0;
 		memset(Rx_command, 0, sizeof(Rx_command[0]) * CMD_BUFFER_SIZE); // wipe Rx_command
-		uint8_t message[DATA_SIZE] = " - invalid entry, please try again.\r\n >"; // right now just exits
+		uint8_t message[DATA_SIZE] = " - invalid entry, please try again. Use command 'O' or 'o' for more command options\r\n >"; // right now just exits
 		HAL_UART_Transmit(&huart2, message, DATA_SIZE, HAL_MAX_DELAY);
 		return;
 	}
