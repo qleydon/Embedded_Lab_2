@@ -553,21 +553,43 @@ int main(void)
 
   // 				demo tests
   // -----------------------------------------
-  // recipe_test_default
-  // recipe_test_all_possible_positions
-  // recipe_test_command_error
-  // recipe_test_command_error2
-  // recipe_test_nested_loop_error
+  // [1]
+  // recipe_test_all_possible_positions (...positioned to approximately 6 even...)
+  //
+  // [2]
+  // recipe_test_default (...demonstrate all required undergrad op-codes...)
+  //
+  // [3]
+  // For LED displaying testing, run recipe_test_default to
+  // 	show 'Recipe Running (D1 only)' and 'Recipe Paused (all off)'
+  // recipe_test_command_error ('Recipe Command Error (D2 on)')
+  // recipe_test_command_error2 ( ^^^ )
+  // recipe_test_nested_loop_error ('D1 and D2 both on')
+  //
+  // [4]
+  // For showing user commands, can use any recipe. Prefer recipe_test_default.
+  //
+  // [5]
+  // For showing independent operation can use any recipe on either.
+  //	But prefer recipe_test_default on servo1
+  // 	and recipe_test_all_possible_positions on servo2
+  //
+  // [6]
+  // recipe_test_default contains the required recipe snippet for wait time
+  //
+  // [7]
+  // recipe_test_graduate_opcodes
+  //
+  // [EXTRA]
   // recipe_test_verify_continue_override
   // recipe_test_deliberate_error_verify_mov
-  // recipe_test_graduate_opcodes
 
   while (1)
   {
 	  loop_flag = 0;
 	  process_timestep(servo1_p, recipe_test_graduate_opcodes);
 	  process_timestep(servo2_p, recipe_test_default);
-      read_user_command(servo1_p, servo2_p); // read user input
+    read_user_command(servo1_p, servo2_p); // read user input
 	  while(loop_flag == 0);
 
     /* USER CODE END WHILE */
